@@ -1,0 +1,32 @@
+.rohan
+{
+    background-color: black;
+    color: white;
+    border-radius: 250px;    
+}
+.rohan ul
+{
+    overflow: auto;
+}
+.rohan ul a 
+{
+    padding: 3px 3px;
+    text-decoration: none;   
+}
+.rohan li
+{
+    float: left;
+    list-style: none;
+    margin:20px 10px;
+    font-size: larger;
+}
+.rohan input
+{
+border: 2px solid white;
+border-radius:400px;
+padding:center;
+margin-top: 20px;
+margin-left: 1200px;
+width: 200px;  
+text-align: center;
+}

@@ -12,6 +12,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
     <style>
+        .btn{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
+        .btn a{
+            font-size: 20px;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#014d09 ;           
+            border-radius:40px;         
+            padding:10px 10px;                 
+            margin-top:20px;
+            display: inline-block;                   
+        }
         #rohan{
             font-family: 'Signika Negative', sans-serif;
             font-size: 23px;
@@ -28,8 +44,26 @@
             border-radius: 52px;
             border-width: 5px;
             width:255px;
+            
             }
-         span{ 
+            .px{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 30px; 
+                border: 4px rgb(6, 22, 247) solid;  
+                background-color: aqua;  
+                /*background: url('yt.png');*/
+                                       
+            }
+            .px:hover
+            {
+                color: azure;
+                background-color: #080808;
+                cursor:pointer;     
+                font-weight: bold;   
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+            }
+           
+        /* span{ 
             font-family: 'Josefin Sans', sans-serif;
             font-size: 25px;
             font-weight: bolder;
@@ -42,14 +76,19 @@
             border-radius: 52px;
             border-width: 5px;
              width:255px;                     
-             }  
+             }  */
       
     </style>
 </head>
 <body>
-
-    <p id="rohan">A cow is a domesticated mammal that is commonly raised for meat, dairy, and as draft animals. They have four stomachs and are known for their gentle nature. Cows are also important in many cultures, symbolizing fertility, abundance, and wealth. They are often seen grazing in pastures and can provide a sustainable source of food for humans.</p>
+    <div id="rohan">
+    <p >A cow is a domesticated mammal that is commonly raised for meat, dairy, and as draft animals. They have four stomachs and are known for their gentle nature. Cows are also important in many cultures, symbolizing fertility, abundance, and wealth. They are often seen grazing in pastures and can provide a sustainable source of food for humans.</p>
+    <a href="https://www.youtube.com/" target="_blank" ><button class="px">contact us</button></a>   
     <!-- <span> Everyday, I wake up early, have breakfast, and head to work or school. I spend most of my day completing tasks, interacting with colleagues, and learning new things. After work, I enjoy spending time with friends and family, reading a book, or watching my favorite TV show. Finally, I go to bed, ready for another day.<span> -->
-    
+    </div>
+   <div class="btn"><a>Learn More</a>
+   </div>
+        
+   
 </body>
 </html>
