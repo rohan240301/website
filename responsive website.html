@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            font-family: 'Libre Baskerville', serif;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(255, 0, 0);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            top: 0px;
+            left: 0px;
+        }
+
+        #navbar a:hover {
+            color: black;
+            background: rgb(196, 27, 27);
+        }
+
+        #logo {
+            margin: 6px 2px;
+            width: 91px;
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        li {
+
+            flex-direction: row;
+            list-style: none;
+            margin: 5px;
+            font-size: 1.3rem;
+        }
+
+        a {
+            color: rgb(255, 8, 8);
+            display: block;
+            padding: 10px 14px;
+            text-decoration: none;
+            border-radius: 20px;
+
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 666px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            /* background: url('https://images.pexels.com/photos/1121482/pexels-photo-1121482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')no-repeat center center/cover; */
+            background: url('https://images.pexels.com/photos/2814828/pexels-photo-2814828.jpeg?auto=compress&cs=tinysrgb&w=1600')no-repeat center center/cover;
+            height: 71%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.90;
+            top: 0px;
+            left: 0px;
+        }
+
+        .prime {
+            font-size: 2.8rem;
+            padding: 12px;
+        }
+
+        #home h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: brown;
+            color: white;
+            margin: 17px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #menu {
+            width: 375px;
+        }
+
+        .cen {
+            text-align: center;
+            color: black;
+            font-family: 'Roboto Slab', serif;
+            color: red;
+            font-size: 1.2rem;
+        }
+
+        #services {
+            margin: 34px;
+            display: flex;
+        }
+
+        .box {
+            border: 2px solid brown;
+            padding: 34px;
+            margin: 3px 6px;
+            border-radius: 28px;
+            background-color: rgb(213, 215, 216);
+            text-align: center;
+
+        }
+
+        .box img {
+            display: block;
+            height: 356px;
+            margin: auto;
+
+        }
+
+        .h-primary {
+            font-size: 1.8rem;
+            font-family: 'Roboto Slab', serif;
+            color: blue;
+            text-align: center;
+        }
+
+        #hp {
+            padding-top: 5px;
+            font-size: 2.5rem;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .box p {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #client-section {
+            height: 300px;
+            position: relative;
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .client-item img {
+            display: flex;
+            height: 176px;
+            margin: 0px 80px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .client-item {
+            padding: 34px;
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+            /* background: url('https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .prm {
+            text-align: center;
+            font-family: 'Roboto Slab', serif;
+            justify-content: center;
+            padding-top: 8px;
+        }
+
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('https://images.pexels.com/photos/4659806/pexels-photo-4659806.jpeg?auto=compress&cs=tinysrgb&w=1600')no-repeat center center/cover;
+        }
+
+        footer {
+            background: black;
+            padding: 9px 20px;
+            color: white;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box text area {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+            font-family: 'Roboto Slab', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="noun-food-5178059.png" alt="" id="logo">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="prime">welcome to my food website</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, accusantium! Excepturi, placeat natus.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis facilis id. Quos, laborum iste quod
+            tenetur repudiandae ratione autem.</p>
+        <button class="btn">order now</button>
+    </section>
+    <section class="service-con">
+        <h1 class="h-primary" id="hp">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" id="menu">
+                <!-- https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
+                <h2 class="h-primary ">burger</h2>
+                <p class="cen">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eius natus atque adipisci
+                    asperiores
+                    reiciendis porro ipsa nisi accusantium quis, dolore quos. Sit, saepe eaque! Dolore porro cumque quo
+                    animi perferendis mollitia nulla itaque, similique, consectetur, rerum labore eaque at. Excepturi,
+                    et sit? Atque at laudantium ullam quis doloremque tempora!</p>
+            </div>
+            <div class="box">
+                <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    alt="" id="menu">
+                <!-- https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
+                <h2 class="h-primary ">cake</h2>
+                <p class="cen">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eius natus atque adipisci
+                    asperiores
+                    reiciendis porro ipsa nisi accusantium quis, dolore quos. Sit, saepe eaque! Dolore porro cumque quo
+                    animi perferendis mollitia nulla itaque, similique, consectetur, rerum labore eaque at. Excepturi,
+                    et sit? Atque at laudantium ullam quis doloremque tempora!</p>
+            </div>
+            <div class="box">
+                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    alt="" id="menu">
+                <!-- https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
+                <h2 class="h-primary">byriani</h2>
+                <p class="cen">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eius natus atque adipisci
+                    asperiores
+                    reiciendis porro ipsa nisi accusantium quis, dolore quos. Sit, saepe eaque! Dolore porro cumque quo
+                    animi perferendis mollitia nulla itaque, similique, consectetur, rerum labore eaque at. Excepturi,
+                    et sit? Atque at laudantium ullam quis doloremque tempora!</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="prm">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://thenounproject.com/api/private/icons/2125385/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABkQ83TpkoQc1Y0dSeITZw2S0XqIXmjZcMVahtGgf9gXdjdU8r5nb-oVdxkS_x5Q6mS1qgFiE58FSo4aFEKMroe4J6-kg%3D%3D"
+                    alt="our clients">
+            </div>
+            <div class="client-item">
+                <img src="https://static.thenounproject.com/png/3266490-200.png" alt="our clients">
+            </div>
+            <div class="client-item">
+                <img src="https://static.thenounproject.com/png/1014780-200.png " alt="our clients">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary">Contact-us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="name group">
+                    <label for="name"> name:</label>
+                    <input type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="name group">
+                    <label for="phone"> phone:</label>
+                    <input type="phone" name="name" placeholder="Enter your phone no">
+                </div>
+                <div class="name group">
+                    <label for="e-mail"> e-mail:</label>
+                    <input type="e-mail" name="name" placeholder="Enter your e-mail">
+                </div>
+                <div class="name group">
+                    <label for="text"> message:</label>
+                    <input type="message" name="name" placeholder="Enter your message">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="cen">
+            copyright &copy; rohan's website
+        </div>
+    </footer>
+</body>
+
+</html>
